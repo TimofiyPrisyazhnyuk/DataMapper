@@ -1,7 +1,8 @@
 <?php
 
-namespace DataMapper;
-
+/**
+ * Class StorageAdapter
+ */
 class StorageAdapter
 {
     /**

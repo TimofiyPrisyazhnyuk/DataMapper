@@ -1,7 +1,8 @@
 <?php
 
-namespace DataMapper;
-
+/**
+ * Class User
+ */
 class User
 {
     /**
@@ -27,6 +28,11 @@ class User
         );
     }
 
+    /**
+     * User constructor.
+     * @param string $username
+     * @param string $email
+     */
     public function __construct(string $username, string $email)
     {
         // validate parameters before setting them!

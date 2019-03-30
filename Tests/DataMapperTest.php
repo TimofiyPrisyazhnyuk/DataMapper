@@ -2,16 +2,17 @@
 
 namespace DataMapper\Tests;
 
-use DataMapper\StorageAdapter;
-use DataMapper\User;
-use DataMapper\UserMapper;
+use StorageAdapter;
+use UserMapper;
 
-foreach (glob("*.php") as $filename) {
-    if (file_exists($file = __DIR__ . '/../' . $filename)) {
-        require_once $file;
-    }
-}
+spl_autoload_register(function ($class) {
+    include __DIR__ . '/../' . $class . '.php';
+});
 
+/**
+ * Class DataMapperTest
+ * @package DataMapper\Tests
+ */
 class DataMapperTest
 {
     /**
@@ -29,4 +30,5 @@ class DataMapperTest
     }
 }
 
+// Run test.
 (new DataMapperTest())->test();
